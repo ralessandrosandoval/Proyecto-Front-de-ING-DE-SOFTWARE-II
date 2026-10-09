@@ -1,0 +1,504 @@
+/* Lift Up - estilos basicos, solo blanco y negro */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #fff;
+  color: #000;
+  line-height: 1.4;
+}
+
+h1 {
+  font-size: 24px;
+  margin: 0 0 12px;
+}
+
+h2 {
+  font-size: 18px;
+  margin: 16px 0 8px;
+}
+
+a {
+  color: #000;
+}
+
+img,
+video {
+  max-width: 100%;
+}
+
+/* ---------- Navbar ---------- */
+.navbar {
+  border-bottom: 2px solid #000;
+  background: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.navbar-inner {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 20px;
+  letter-spacing: 2px;
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.nav-links a {
+  text-decoration: none;
+  padding: 4px 8px;
+  border: 1px solid #fff;
+  font-size: 14px;
+}
+
+.nav-links a:hover {
+  border-color: #000;
+}
+
+.nav-links a.active {
+  background: #000;
+  color: #fff;
+}
+
+.nav-links a.active .avatar {
+  border-color: #fff;
+}
+
+.nav-profile {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* ---------- Layout ---------- */
+.container {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4px;
+}
+
+.page-header h1 {
+  margin: 0;
+}
+
+.center {
+  text-align: center;
+}
+
+.small {
+  font-size: 13px;
+  font-style: italic;
+}
+
+.link {
+  font-weight: bold;
+}
+
+/* ---------- Cards ---------- */
+.card {
+  border: 1px solid #000;
+  padding: 16px;
+  margin-bottom: 16px;
+  background: #fff;
+}
+
+/* ---------- Botones ---------- */
+.btn {
+  display: inline-block;
+  background: #000;
+  color: #fff;
+  border: 2px solid #000;
+  padding: 8px 16px;
+  font-size: 14px;
+  font-family: inherit;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+}
+
+.btn:hover {
+  background: #fff;
+  color: #000;
+}
+
+.btn-secondary {
+  background: #fff;
+  color: #000;
+}
+
+.btn-secondary:hover {
+  background: #000;
+  color: #fff;
+}
+
+.btn-small {
+  padding: 4px 10px;
+  font-size: 13px;
+}
+
+.btn-block {
+  width: 100%;
+  margin: 8px 0 16px;
+}
+
+.btn:disabled {
+  background: #fff;
+  color: #000;
+  border-style: dashed;
+  cursor: not-allowed;
+}
+
+/* ---------- Formularios ---------- */
+.form-field {
+  margin-bottom: 14px;
+}
+
+.form-field label {
+  display: block;
+  font-weight: bold;
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+input[type='text'],
+input[type='email'],
+input[type='password'],
+select,
+textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #000;
+  background: #fff;
+  color: #000;
+  font-family: inherit;
+  font-size: 14px;
+}
+
+textarea {
+  resize: vertical;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 2px solid #000;
+  outline-offset: 1px;
+}
+
+input:disabled,
+select:disabled,
+textarea:disabled {
+  border-style: dashed;
+}
+
+.field-error {
+  margin: 4px 0 0;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.field-error::before {
+  content: '! ';
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+/* ---------- Mensajes ---------- */
+.alert {
+  border: 2px solid #000;
+  padding: 8px 12px;
+  margin: 12px 0;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.alert p {
+  margin: 0 0 8px;
+}
+
+.notice {
+  border: 1px dashed #000;
+  padding: 8px 12px;
+  margin: 12px 0;
+  font-size: 14px;
+}
+
+.empty {
+  border: 1px dashed #000;
+  padding: 32px 16px;
+  text-align: center;
+}
+
+/* ---------- Login / Registro ---------- */
+.auth-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 380px;
+  margin: 0;
+}
+
+.auth-title {
+  text-align: center;
+  letter-spacing: 4px;
+  margin-bottom: 0;
+}
+
+/* ---------- Avatar ---------- */
+.avatar {
+  border: 2px solid #000;
+  border-radius: 50%;
+  object-fit: cover;
+  background: #fff;
+  flex-shrink: 0;
+}
+
+.avatar-edit {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+/* ---------- Publicaciones ---------- */
+.post-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.post-author {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.author-name {
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.media {
+  display: block;
+  width: 100%;
+  max-height: 480px;
+  object-fit: contain;
+  border: 1px solid #000;
+  background: #fff;
+}
+
+.media.preview {
+  margin-bottom: 14px;
+}
+
+.media-placeholder {
+  border: 1px dashed #000;
+  padding: 48px 16px;
+  text-align: center;
+  font-style: italic;
+}
+
+.post-text {
+  margin: 10px 0 6px;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.list-end {
+  text-align: center;
+  margin: 16px 0;
+}
+
+/* ---------- Pull to refresh ---------- */
+.ptr-indicator {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ptr-animated {
+  transition: height 0.2s;
+}
+
+/* ---------- Barra de progreso ---------- */
+.progress {
+  position: relative;
+  border: 2px solid #000;
+  height: 24px;
+  margin-bottom: 12px;
+}
+
+.progress-fill {
+  height: 100%;
+  background: #000;
+  transition: width 0.1s;
+}
+
+.progress-text {
+  position: absolute;
+  inset: 0;
+  text-align: center;
+  line-height: 20px;
+  font-size: 13px;
+  font-weight: bold;
+  mix-blend-mode: difference;
+  color: #fff;
+}
+
+/* ---------- Perfil ---------- */
+.profile-header {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.profile-info {
+  flex: 1;
+}
+
+.profile-info h1 {
+  margin-bottom: 6px;
+}
+
+.profile-info p {
+  margin: 6px 0;
+}
+
+.badge {
+  display: inline-block;
+  border: 1px solid #000;
+  padding: 2px 8px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.menu {
+  position: relative;
+}
+
+.menu-list {
+  position: absolute;
+  right: 0;
+  top: 100%;
+  margin: 4px 0 0;
+  padding: 0;
+  list-style: none;
+  border: 2px solid #000;
+  background: #fff;
+  min-width: 160px;
+  z-index: 5;
+}
+
+.menu-list a,
+.menu-list button {
+  display: block;
+  width: 100%;
+  padding: 10px 12px;
+  background: #fff;
+  color: #000;
+  border: none;
+  font-family: inherit;
+  font-size: 14px;
+  text-align: left;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.menu-list a:hover,
+.menu-list button:hover {
+  background: #000;
+  color: #fff;
+}
+
+.dev-tools summary {
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* ---------- Modal ---------- */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  z-index: 100;
+}
+
+.modal {
+  background: #fff;
+  border: 2px solid #000;
+  padding: 20px;
+  width: 100%;
+  max-width: 380px;
+}
+
+.modal h2 {
+  margin-top: 0;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+/* ---------- Celular ---------- */
+@media (max-width: 480px) {
+  .profile-header {
+    flex-wrap: wrap;
+  }
+
+  .nav-links a {
+    padding: 4px 6px;
+    font-size: 13px;
+  }
+}
