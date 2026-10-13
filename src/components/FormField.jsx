@@ -4,7 +4,7 @@ export default function FormField({ label, htmlFor, error, children }) {
     <div className="form-field">
       <label htmlFor={htmlFor}>{label}</label>
       {children}
-      {error && <p className="field-error">{error}</p>}
+      {error && <p className="field-error" role="alert">{error}</p>}
     </div>
   )
 }

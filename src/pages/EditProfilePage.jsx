@@ -76,7 +76,7 @@ export default function EditProfilePage() {
             <button type="button" className="btn btn-secondary btn-small" onClick={() => fileInput.current.click()} disabled={saving}>
               Cambiar foto
             </button>
-            {avatarError && <p className="field-error">{avatarError}</p>}
+            {avatarError && <p className="field-error" role="alert">{avatarError}</p>}
           </div>
         </div>
 
@@ -99,7 +99,7 @@ export default function EditProfilePage() {
           <span className="small">{bio.length}/160</span>
         </FormField>
 
-        {serverError && <p className="alert">{serverError}</p>}
+        {serverError && <p className="alert" role="alert">{serverError}</p>}
 
         <div className="form-actions">
           <Link to="/perfil" className="btn btn-secondary">

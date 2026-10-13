@@ -92,12 +92,12 @@ export default function PostDetailPage() {
         <MediaView media={post.media} />
 
         {message && <p className="notice">{message}</p>}
-        {error && !editing && <p className="alert">{error}</p>}
+        {error && !editing && <p className="alert" role="alert">{error}</p>}
 
         {editing ? (
           <div>
             <textarea rows="4" maxLength={500} value={text} onChange={(e) => setText(e.target.value)} disabled={saving} />
-            {error && <p className="field-error">{error}</p>}
+            {error && <p className="field-error" role="alert">{error}</p>}
             <div className="form-actions">
               <button className="btn btn-secondary" onClick={() => setEditing(false)} disabled={saving}>
                 Cancelar

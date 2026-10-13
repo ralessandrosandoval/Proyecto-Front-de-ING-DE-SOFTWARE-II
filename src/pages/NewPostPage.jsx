@@ -123,7 +123,7 @@ export default function NewPostPage() {
         {uploading && <ProgressBar value={progress} />}
 
         {uploadError && (
-          <div className="alert">
+          <div className="alert" role="alert">
             <p>{uploadError}</p>
             <button type="button" className="btn btn-small" onClick={publish}>
               Reintentar

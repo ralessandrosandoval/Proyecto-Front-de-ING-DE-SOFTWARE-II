@@ -67,7 +67,7 @@ export default function LoginPage() {
             />
           </FormField>
 
-          {serverError && <p className="alert">{serverError}</p>}
+          {serverError && <p className="alert" role="alert">{serverError}</p>}
 
           <button className="btn btn-block" type="submit" disabled={loading}>
             {loading ? 'Entrando...' : 'Iniciar Sesión'}
